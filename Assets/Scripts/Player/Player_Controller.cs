@@ -10,9 +10,14 @@ public class Player_Controller : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
-
-    [HideInInspector]
+    public static Player_Controller instance;
+    
     public bool canMove = true;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {

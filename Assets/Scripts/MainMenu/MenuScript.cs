@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class MenuScript : MonoBehaviour
     public TextMesh start, options, quit;
     public AudioClip selectSound;
     public AudioSource audioSource;
+    public Canvas canvas;
+    public GameObject tutorial;
     
     void Update()
     {
@@ -62,9 +65,11 @@ public class MenuScript : MonoBehaviour
         {
             case "Start":
                 audioSource.PlayOneShot(selectSound);
+                tutorial.SetActive(true);
                 break;
             case "Options":
                 audioSource.PlayOneShot(selectSound);
+                canvas.GetComponent<MainMenu>().ShowSettings();
                 break;
             case "Quit":
                 Application.Quit(69);

@@ -32,7 +32,6 @@ public class Player_Footsteps : MonoBehaviour
     {
         if (_characterController.isGrounded && _characterController.velocity.magnitude > 1f && !audioSource.isPlaying)
         {
-            audioSource.volume = Random.Range(1f, 1.5f);
             audioSource.pitch = Random.Range(1f, 1.5f);
             if (Random.Range(0, 2) > 1)
                 audioSource.clip = footsteps[0];

@@ -1,5 +1,4 @@
-https://www.fesliyanstudios.com/ - Footsteps
-Audio Vampire - Free Effects |- Night ambient 
-Base FPS controller - SharpCoder
-Camera pixelizer post process effect - Andrii(itch.io)
-FesliyanStudios - lamp light
+- Credits -
+Fesliyan Studios
+Audio Vampire - Free Effects
+Camera Pixelizer - Andrii(itch.io)
