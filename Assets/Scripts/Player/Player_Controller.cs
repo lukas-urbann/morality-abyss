@@ -7,7 +7,7 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour
 {
     private Player_Vars _vars;
-    CharacterController characterController;
+    public CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
     public static Player_Controller instance;
