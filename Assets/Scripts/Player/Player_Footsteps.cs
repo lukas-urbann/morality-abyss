@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Player_Footsteps : MonoBehaviour
 {
-    private CharacterController _characterController;
     public List<AudioClip> footsteps = new List<AudioClip>();
     public AudioClip jumpStep;
     public AudioClip fallStep;
     public AudioSource audioSource;
+    public static Player_Footsteps instance;
+    private Player_Controller player;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        _characterController = GetComponent<CharacterController>();
+        player = Player_Controller.instance;
     }
     
     public void PlayJump()
@@ -30,7 +35,7 @@ public class Player_Footsteps : MonoBehaviour
 
     public void PlayWalk()
     {
-        if (_characterController.isGrounded && _characterController.velocity.magnitude > 1f && !audioSource.isPlaying)
+        if (player.characterController.isGrounded && player.characterController.velocity.magnitude > 1f && !audioSource.isPlaying)
         {
             audioSource.pitch = Random.Range(1f, 1.5f);
             if (Random.Range(0, 2) > 1)

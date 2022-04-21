@@ -42,7 +42,7 @@ public class Player_Controller : MonoBehaviour
 
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            _vars.playerFootsteps.PlayJump();
+            Player_Footsteps.instance.PlayJump();
             moveDirection.y = _vars.jumpSpeed;
         }
         else
@@ -62,7 +62,7 @@ public class Player_Controller : MonoBehaviour
         // Rotace kamery
         if (canMove)
         {
-            _vars.playerFootsteps.PlayWalk();
+            //_vars.playerFootsteps.PlayWalk();
             rotationX += -Input.GetAxis("Mouse Y") * _vars.lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -_vars.lookXLimit, _vars.lookXLimit);
             _vars.playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);

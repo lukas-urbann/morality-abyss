@@ -12,11 +12,11 @@ public class Player_Vars : MonoBehaviour
     public float lookXLimit = 45.0f;
     public AudioSource audioSource;
 
-    [HideInInspector] public Player_Footsteps playerFootsteps;
+    //[HideInInspector] public Player_Footsteps playerFootsteps;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        playerFootsteps = GetComponent<Player_Footsteps>();
+        //playerFootsteps = GetComponent<Player_Footsteps>();
     }
 }

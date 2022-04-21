@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 434546682}
   - component: {fileID: 434546681}
   - component: {fileID: 434546684}
+  - component: {fileID: 434546685}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -161,8 +162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 119}
-  m_SizeDelta: {x: 403.3075, y: 75.62012}
+  m_AnchoredPosition: {x: -491.66626, y: 125}
+  m_SizeDelta: {x: 179.615, y: 75.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434546681
 MonoBehaviour:
@@ -272,6 +273,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsScreen: {fileID: 0}
   pPause: {fileID: 0}
+--- !u!114 &434546685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434546679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9ac70c74cb74f459c8a4947b20d7cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText: {fileID: 0}
+  buttonTextName: Text
+  selectedTextColor: {r: 0.6320754, g: 0.4945387, b: 0.372686, a: 1}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &523359054
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,12 +430,12 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 45
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.5
   m_Text: You tried, but you failed. Your parents will soon launch an international
     search for a missing child. You don't care anymore, I mean you can't care anymore,
     since you were eaten by something just a minute ago. Despite your failure, you
@@ -744,8 +761,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 475.53003}
-  m_SizeDelta: {x: -757.06213, y: -951.05054}
+  m_AnchoredPosition: {x: 0, y: 570.64}
+  m_SizeDelta: {x: -757.062, y: -1141.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389712695
 MonoBehaviour:
@@ -770,11 +787,11 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6ad2acabcf118ced3b6f4cd67d3d02c7, type: 3}
     m_FontSize: 45
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 45
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

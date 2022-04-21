@@ -10,13 +10,12 @@ public class Player_Raycast : MonoBehaviour
     private Player_Inventory _pInventory;
     private AudioSource _audioSource;
     public AudioClip unknownAction, thunder;
-    private Player_BatteryLife _pBat;
+    public Player_BatteryLife _pBat;
     public RawImage notePaper;
     private bool _isReading = false;
 
     void Start()
     {
-        _pBat = transform.parent.gameObject.GetComponent<Player_BatteryLife>();
         _audioSource = gameObject.GetComponent<AudioSource>();
         pickUpText.enabled = false;
         _pInventory = transform.parent.gameObject.GetComponent<Player_Inventory>();
@@ -125,7 +124,7 @@ public class Player_Raycast : MonoBehaviour
                             {
                                 notePaper.texture = hit.collider.gameObject.GetComponent<Items_Identity>().noteImage;
                                 notePaper.gameObject.SetActive(true);
-                                _pBat.gameObject.GetComponent<Player_Controller>().canMove = false;
+                                Player_Controller.instance.canMove = false;
                                 
                                 if (hit.collider.gameObject.name.Equals("Note_ruins2"))
                                 {
@@ -136,7 +135,7 @@ public class Player_Raycast : MonoBehaviour
                             else
                             {
                                 notePaper.gameObject.SetActive(false);
-                                _pBat.gameObject.GetComponent<Player_Controller>().canMove = true;
+                                Player_Controller.instance.canMove = true;
                             }
 
                             _isReading = !_isReading;
