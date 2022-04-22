@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Guardian
   - Outpost
+  - MinimapMarker
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - PlayerHand
   - MenuButtons
-  - 
+  - MinimapMarker
   - 
   - 
   - 
