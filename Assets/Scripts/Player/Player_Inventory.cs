@@ -27,9 +27,9 @@ public class Player_Inventory : MonoBehaviour
         if (!gameObject.GetComponent<Player_Pause>().pause)
         {
             mapOn = !mapOn;
-            
-            if (!mapOn)
-            { map.gameObject.SetActive(false); } else { map.gameObject.SetActive(true); }
+
+            map.gameObject.SetActive(mapOn);
+            Player_Controller.instance.canMove = !mapOn;
         }
     }
 }

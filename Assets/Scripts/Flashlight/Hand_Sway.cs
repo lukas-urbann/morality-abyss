@@ -22,6 +22,8 @@
         movY = Mathf.Clamp(movY, -max, max);
 
         Vector3 finalPosition = new Vector3(movX, movY, 0);
-        transform.localPosition = Vector3.Lerp(transform.localPosition, finalPosition + curP, Time.deltaTime * smooth);
+
+        if(Player_Controller.instance.canMove)
+            transform.localPosition = Vector3.Lerp(transform.localPosition, finalPosition + curP, Time.deltaTime * smooth);
     }
  }
