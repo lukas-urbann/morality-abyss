@@ -18,7 +18,7 @@ public class Player_Raycast : MonoBehaviour
     {
         _audioSource = gameObject.GetComponent<AudioSource>();
         pickUpText.enabled = false;
-        _pInventory = transform.parent.gameObject.GetComponent<Player_Inventory>();
+        _pInventory = transform.root.gameObject.GetComponent<Player_Inventory>();
     }
 
     void Update()
